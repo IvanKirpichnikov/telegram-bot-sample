@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools == 70.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = 'telegram-bot-sample'
+version = '1.0.0'
+description = 'Telegram bot sample'
+readme = 'README.rst'
+license = { file = 'LICENSE' }
+requires-python = '~=3.11'
+maintainers = [
+    { name = "Ivan Kirpichnikov", email = "mmssvvvv570@gmail.com" }
+]
+dependencies = [
+    'redis==5.0.6',
+    'psqlpy==0.6.4',
+    'aiogram==3.7.0',
+    'adaptix==3.0.0b7',
+    'fluent.runtime==0.4.0',
+    'dishka@git+https://github.com/reagento/dishka.git@730e9adedbf84147552053a9340943f298867caf',
+    'aiogram-dialog@git+https://github.com/Tishka17/aiogram_dialog.git@e47484809aaa42dd3ece6b41a35a6eb3d7d09224'
+]
+
+[project]
+telegram-bot-sample-cli = 'telegram_bot_sample.cli:main'
+
+[project.optional-dependencies]
+dev = [
+    'mypy==1.9.0',
+    'ruff==0.4.7',
+]
+
+[tool.mypy]
+show_absolute_path = true

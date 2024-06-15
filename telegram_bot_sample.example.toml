@@ -1,0 +1,53 @@
+# Telegram bot config
+[telegram_bot]
+## type: string
+## description: telegram bot token
+token = ''
+## type: string
+## description: username telegram bot
+user_name = ''
+## type: boolean
+## description: Skip accumulated updates during bot sleep
+skip_updates = true
+
+
+# Telegram bot storage config
+[telegram_bot.storage]
+## type: optional[string]
+## description: connection url to storage
+url = ''
+## type: string(memory | redis)
+## description: storage type
+storage_type = ''
+## type: string(memory | redis)
+## description: event isolation type
+events_isolation_type = ''
+
+
+# Telegram bot owner config
+[telegram_bot.owner]
+## type: biginteger
+## description: owner telegram user id
+tg_user_id = -1
+## type: biginteger
+## description: owner telegram chat id
+tg_chat_id = -1
+
+# Postgresql config
+[postgresql]
+## type: string
+## description: connection url to postgresql server
+url = ''
+## type: integer
+## description: pool size
+pool_size = -1
+
+
+# Localization config
+[localization]
+## type: string
+## description: path to directory with locales
+path = 'src/telegram_bot_sample/presentation/localization'
+## type: string
+## description: default language
+default_language = ''
